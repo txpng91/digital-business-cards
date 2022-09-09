@@ -9,7 +9,7 @@ function Main() {
         <li>For practice</li>
         <li>For continuous UI/UX implementation</li>
         <li>With different type of styles</li>
-        <li>Continuing with diverse ideas creativity</li>
+        <li>Continuing with diverse creativity</li>
         <li>To apply in enterprise apps, including mobile apps</li>
       </ul>
     </main>

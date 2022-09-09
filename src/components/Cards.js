@@ -1,108 +1,74 @@
 import React from 'react';
 
+import Card from './Card';
+
+import Pete from './images/people/Pete.png';
+import Michael from './images/people/Michael.png';
+import Samuel from './images/people/Samuel.png';
+import Anna from './images/people/Anna.png';
+import Olivia from './images/people/Olivia.png';
+
+const members = [
+  {
+    name: 'Pete Garcia',
+    image: Pete,
+    occupation: 'Front-End Developer',
+    description: 'Working to be a front-end developer',
+    interest1: 'Gaming',
+    interest2: 'Football',
+    interest3: 'Work Out',
+    interest4: 'Watch Anime',
+  },
+  {
+    name: 'Michael',
+    image: Michael,
+    occupation: 'Gas Deliverer',
+    description: 'Married to Olivia with two kids',
+    interest1: 'Going to Disney World',
+    interest2: 'Football',
+    interest3: 'Exploring',
+    interest4: 'Watching Movies',
+  },
+  {
+    name: 'Samuel Garcia',
+    image: Samuel,
+    occupation: 'General Manager',
+    description: 'Married to Anna with two kids',
+    interest1: 'Football',
+    interest2: 'Family Vacations',
+    interest3: 'Cooking',
+    interest4: 'Card Games',
+  },
+  {
+    name: 'Anna Garcia',
+    image: Anna,
+    occupation: 'Photographer',
+    description: 'Married to Samuel with two kids',
+    interest1: 'Football',
+    interest2: 'Photography',
+    interest3: 'Editing',
+    interest4: 'Family Vacation',
+  },
+
+  {
+    name: 'Olivia Garcia',
+    image: Olivia,
+    occupation: 'Customer Service Representative',
+    description: 'Married to Michael with two kids',
+    interest1: 'Reality TV Shows',
+    interest2: 'Watching Movies',
+    interest3: 'Staying at home',
+    interest4: 'Exploring',
+  },
+];
+
 function Cards() {
   return (
     <div className='column'>
       <div className='row'>
-        <div className='card'>
-          <img className='card-image' src='Pete.png' alt='Pete' />
-          <div className='container'>
-            <h3>
-              <b>Nicholas Garcia</b>
-            </h3>
-            <p>Front-End Developer</p>
-            <div className='btn-container'>
-              <button className='email-btn'>Email</button>
-              <button className='linkedIn-btn'>LinkedIn</button>
-            </div>
-            <h4>
-              <b>About Me</b>
-            </h4>
-            <p>Growing to be a frontend developer.</p>
-            <h4>Interests</h4>
-            <ul>
-              <li>Football</li>
-              <li>Cooking</li>
-              <li>Exploring cities</li>
-              <li>Going to the gym</li>
-            </ul>
-          </div>
-        </div>
-        <div className='card'>
-          <img className='card-image' src='Samuel.png' alt='Samuel' />
-          <div className='container'>
-            <h3>
-              <b>Mathew Garcia</b>
-            </h3>
-            <p>General Manager</p>
-            <div className='btn-container'>
-              <button className='email-btn'>Email</button>
-              <button className='linkedIn-btn'>LinkedIn</button>
-            </div>
-            <h4>
-              <b>About Me</b>
-            </h4>
-            <p>
-              Married to Elise Garcia with two children, Leon and Mia Garcia
-            </p>
-            <h4>Interests</h4>
-            <ul>
-              <li>Music</li>
-              <li>Card Games</li>
-              <li>Socializing</li>
-            </ul>
-          </div>
-        </div>
-        <div className='card'>
-          <img className='card-image' src='Michael.png' alt='Michael' />
-          <div className='container'>
-            <h3>
-              <b>Nash Garcia</b>
-            </h3>
-            <p>Gas Delivery Driver</p>
-            <div className='btn-container'>
-              <button className='email-btn'>Email</button>
-              <button className='linkedIn-btn'>LinkedIn</button>
-            </div>
-            <h4>
-              <b>About Me</b>
-            </h4>
-            <p>
-              Married to Hope Garcia with two children, Nakoa and Ahanu Garcia
-            </p>
-            <h4>Interests</h4>
-            <ul>
-              <li>Watching movies</li>
-              <li>Disney World</li>
-              <li>Crypto currency</li>
-            </ul>
-          </div>
-        </div>
-        <div className='card'>
-          <img className='card-image' src='Anna.png' alt='Anna' />
-          <div className='container'>
-            <h3>
-              <b>Elise Garcia</b>
-            </h3>
-            <p>Bank Associate</p>
-            <div className='btn-container'>
-              <button className='email-btn'>Email</button>
-              <button className='linkedIn-btn'>LinkedIn</button>
-            </div>
-            <h4>
-              <b>About Me</b>
-            </h4>
-            <p>
-              Married to Matthew Garcia with two children, Leon and Mia Garcia
-            </p>
-            <h4>Interests</h4>
-            <ul>
-              <li>Photography</li>
-              <li>Dogs</li>
-              <li>Socializing</li>
-            </ul>
-          </div>
-        </div>
+        {members.map((member, index) => {
+          return <Card {...member} key={index} />;
+        })}
       </div>
     </div>
   );
